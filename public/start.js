@@ -2,7 +2,7 @@ import "bulma/css/bulma.css";
 import "bulma-divider/dist/css/bulma-divider.min.css";
 import "bulma-tooltip/dist/css/bulma-tooltip.min.css";
 import "typeface-press-start-2p";
-import "../node_modules/nes.css/css/nes.css";
+import "../node_modules/maksimivanov-nes.css/css/nes.css";
 import $ from "jquery";
 import ClipboardJS from "../node_modules/clipboard/dist/clipboard.js";
 import "typeface-orbitron";

@@ -1,20 +1,14 @@
 const express = require("express");
 const app = express();
-const http = require("http").Server(app);
 const socketIO = require("socket.io");
-const IP = require("./utils.ts");
-const port = process.env.PORT || IP.port;
-// const server = express()
-// const server = app.use(express.static("dist")).listen(IP.port, IP.ip, () => {
-const server = app.use(express.static("dist")).listen(IP.port, IP.ip, () => {
-  console.log("Listening on " + IP.ip + ":" + port);
+const port = process.env["port"] || 3000;
+const server = app.use(express.static("dist")).listen(port, () => {
+  console.log(`Listening on ${port}`);
 });
 const io = socketIO(server);
 //let setEnemyId = new Map();
 let setEnemyId = [];
 let clientID;
-let clientIDs;
-let count = 0;
 let snakeArr = [];
 let enemyColors = [];
 let rooms = {};

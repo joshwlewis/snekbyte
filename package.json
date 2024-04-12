@@ -2,9 +2,12 @@
   "name": "my_snake_02",
   "version": "1.0.0",
   "description": "",
-  "main": "bundle.js",
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  },
   "scripts": {
-    "dev": "parcel public/index.html public/game.html",
+    "dev": "parcel serve public/index.html public/game.html",
     "start": "node server.js",
     "build": "parcel build public/index.html public/game.html"
   },
@@ -19,12 +22,10 @@
     "bulma-badge": "^3.0.1",
     "bulma-divider": "^0.2.0",
     "bulma-tooltip": "^3.0.2",
-
-    "express": "^4.17.3",
     "clipboard": "^2.0.10",
-
+    "express": "^4.17.3",
     "jquery": "^3.5.1",
-    "nes.css": "^2.3.0",
+    "maksimivanov-nes.css": "^1.0",
     "nipplejs": "^0.9.1",
     "socket.io": "^3.0.0",
     "socket.io-client": "^4.4.1",
@@ -32,8 +33,15 @@
     "typeface-press-start-2p": "0.0.72"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "buffer": "^6.0.3",
     "cssnano": "^5.1.13",
+    "parcel": "^2.12.0",
     "sass": "^1.26.5",
     "typescript": "^3.8.3"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ]
 }
