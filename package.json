@@ -7,9 +7,11 @@
     "npm": "10.x"
   },
   "scripts": {
-    "dev": "parcel serve public/index.html public/game.html",
-    "start": "node server.js",
-    "build": "parcel build public/index.html public/game.html"
+    "build-watch": "parcel watch public/index.html public/game.html",
+    "start-watch": "nodemon server.js",
+    "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
+    "build": "parcel build public/index.html public/game.html",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -35,7 +37,9 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.12.0",
     "buffer": "^6.0.3",
+    "concurrently": "^8.2.2",
     "cssnano": "^5.1.13",
+    "nodemon": "^3.1.0",
     "parcel": "^2.12.0",
     "sass": "^1.26.5",
     "typescript": "^3.8.3"
