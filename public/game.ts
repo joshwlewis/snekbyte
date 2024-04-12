@@ -322,6 +322,7 @@ export default class Snake {
       }
     }
   }
+
   getclientID() {
     return this.clientId;
   }
@@ -347,6 +348,7 @@ export default class Snake {
     }
     this.trophy.innerText = this.score;
   }
+
   resize() {
     this.canvas.width = this.container.clientWidth;
     this.canvas.height = this.container.clientHeight;
@@ -449,6 +451,7 @@ export default class Snake {
     var randFx = comboEffect[Math.floor(Math.random() * comboEffect.length)];
     this.comboFX = randFx;
   }
+
   applePosition() {
     return {
       x:
