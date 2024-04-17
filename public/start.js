@@ -6,7 +6,6 @@ import "../node_modules/maksimivanov-nes.css/css/nes.css";
 import $ from "jquery";
 import ClipboardJS from "../node_modules/clipboard/dist/clipboard.js";
 import "typeface-orbitron";
-import IP from "../utils";
 
 const startBtn = document.querySelector("#start");
 const createRoom = document.querySelector("#createRoom");
