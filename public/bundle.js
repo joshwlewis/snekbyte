@@ -10,7 +10,6 @@ import nipplejs from "nipplejs";
 import "./scss/main.scss";
 import Snake from "./game";
 import ConnectionManager from "./ConnectionManager";
-import IP from "../utils";
 
 const container = document.querySelector("#gameBox");
 const trophy = document.querySelector("#trophy");
@@ -24,7 +23,7 @@ let arr = [];
 let joystick;
 
 //### Init socket&snake ###//
-_connectionManager.connect(`${IP.http}${IP.ip}:${IP.port}`);
+_connectionManager.connect(window.location.origin);
 const _io = _connectionManager.io();
 // let snake = new Snake(container, canvas, _io);
 let snake = new Snake({ cnt: container, cnv: canvas, trophy: trophy, io: _io });
@@ -61,6 +60,6 @@ _io.on("gameover", (_id) => {
   // console.log("enemy fallen ", _id);
   if (_id === snake.getclientID()) {
     // console.log("enemy fallen id", snake.getclientID());
-    window.location.replace(`${IP.http}${IP.ip}:${IP.port}`);
+    window.location.replace("/");
   }
 });

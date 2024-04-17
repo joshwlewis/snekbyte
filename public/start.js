@@ -41,8 +41,7 @@ function listener(event) {
     joinRoom.addEventListener("click", (e) => {
       e.preventDefault();
       if (newRandomCode.value) {
-        location.assign(`${IP.http}${IP.ip}:${IP.port}/${val}
-`);
+        location.assign(`/${val}`);
       }
     });
   } else {
@@ -100,7 +99,6 @@ function clip(e) {
 startBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (newRandomCode.value) {
-    location.assign(`${IP.http}${IP.ip}:${IP.port}/${newRandomCode.value}
-`);
+    location.assign(`/${newRandomCode.value}`);
   }
 });
