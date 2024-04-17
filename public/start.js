@@ -13,8 +13,8 @@ const newRandomCode = document.querySelector("#newRandomCode");
 const joinRoom = document.querySelector("#joinRoom");
 const joinRoomCode = document.querySelector("#joinRoomCode");
 const btn = document.querySelector("#btn");
-const codeUrlLength = 20;
-let random = randCode(20);
+const codeUrlLength = 3;
+let random = randCode(8);
 newRandomCode.value = random;
 joinRoomCode.innerHTML = " ";
 
