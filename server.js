@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const socketIO = require("socket.io");
-const port = process.env["port"] || 3000;
+const port = process.env["PORT"] || 3000;
 const server = app.use(express.static("dist")).listen(port, () => {
   console.log(`Listening on ${port}`);
 });
